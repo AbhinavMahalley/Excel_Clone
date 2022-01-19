@@ -137,7 +137,7 @@ pasteBtn.addEventListener("click",(e) => {
             cellProp.fontColor = data.fontColor;
             cellProp.BGcolor = data.BGcolor;
             cellProp.alignment = data.alignment;
-
+            console.log(data.fontSize);
             // UI
             cell.click();
         

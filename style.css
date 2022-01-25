@@ -44,8 +44,9 @@ align-items: center;
 }
 .division-border{
     height: 70%;
-    width: 0.15rem;
-    width:2px;
+/*     width: 0.15rem; */
+    border-left: 3px solid grey;
+/*     width:2px; */
     background-color: gray;
     border-radius: 5px;
 }
@@ -96,7 +97,8 @@ align-items: center;
 /* formula - bar */
 .formula-actions-cont{
     height: 2rem;
-    background-color: #ecf0f1;
+  background-color:  #dbe6e3
+/*     background-color: #ecf0f1; */
     /* background-color: #d1d4d4; */
     padding-left: 1rem;
     display: flex;

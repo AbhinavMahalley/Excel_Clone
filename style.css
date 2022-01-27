@@ -97,8 +97,8 @@ align-items: center;
 /* formula - bar */
 .formula-actions-cont{
     height: 2rem;
-  background-color:  #dbe6e3
-/*     background-color: #ecf0f1; */
+/*   background-color:  #dbe6e3 */
+    background-color: #ecf0f1;
     /* background-color: #d1d4d4; */
     padding-left: 1rem;
     display: flex;
@@ -109,6 +109,7 @@ align-items: center;
     margin-right: 0.7rem;
 }
 .address-bar{
+    margin-left: 1rem;
     width: 5rem;
     text-align: center;
 }

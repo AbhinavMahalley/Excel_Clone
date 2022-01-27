@@ -47,7 +47,7 @@ align-items: center;
 /*     width: 0.15rem; */
     border-left: 3px solid grey;
 /*     width:2px; */
-    background-color: gray;
+/*     background-color: gray; */
     border-radius: 5px;
 }
 .cellprop-actions-cont > select{

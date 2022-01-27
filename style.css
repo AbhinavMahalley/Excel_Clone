@@ -109,7 +109,7 @@ align-items: center;
     margin-right: 0.7rem;
 }
 .address-bar{
-    margin-left: 1rem;
+/*     margin-left: 1rem; */
     width: 5rem;
     text-align: center;
 }

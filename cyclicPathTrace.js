@@ -71,8 +71,3 @@ console.log( "srcr -> " + srcr +" srcc -> "+srcc );
     dfsVisited[srcr][srcc] = false;
     return Promise.resolve(false); 
 }
-    }
-
-    dfsVisited[srcr][srcc] = false;
-    return Promise.resolve(false); 
-}

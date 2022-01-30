@@ -39,6 +39,7 @@ async function dfsCycleDetectionTracePath(graphComponentMatrix, srcr, srcc, visi
 console.log( "srcr -> " + srcr +" srcc -> "+srcc );
     let cell = document.querySelector(`.cell[rid="${srcr}"][cid="${srcc}"]`);
     cell.style.backgroundColor = "lightblue"; 
+
     await colorPromise(); //1sec finished
 
     for(let children = 0; children < graphComponentMatrix[srcr][srcc].length; children++){
@@ -46,7 +47,8 @@ console.log( "srcr -> " + srcr +" srcc -> "+srcc );
        if(visited[nbrr][nbrc] === false){
             let response = await dfsCycleDetectionTracePath(graphComponentMatrix, nbrr, nbrc, visited,dfsVisited);
             if(response === true) {
-                cell.style.backgroundColor = "transparent";
+                // cell.style.backgroundColor = "transparent";
+                cell.style.backgroundColor =sheetDB[srcr][srcc].BGcolor;
                 await colorPromise();
                 return Promise.resolve(true); 
             }
@@ -56,12 +58,19 @@ console.log( "srcr -> " + srcr +" srcc -> "+srcc );
             cyclicCell.style.backgroundColor = "lightsalmon";
             await colorPromise();
         
-            cyclicCell.style.backgroundColor = "transparent";
+            // cyclicCell.style.backgroundColor = "transparent";
+            cyclicCell.style.backgroundColor = sheetDB[nbrr][nbrc].BGcolor;
             await colorPromise();
-            cell.style.backgroundColor = "transparent";
+            // cell.style.backgroundColor = "transparent";
+            cell.style.backgroundColor =sheetDB[srcr][srcc].BGcolor;
             await colorPromise();
             return Promise.resolve(true); 
         } 
+    }
+
+    dfsVisited[srcr][srcc] = false;
+    return Promise.resolve(false); 
+}
     }
 
     dfsVisited[srcr][srcc] = false;
